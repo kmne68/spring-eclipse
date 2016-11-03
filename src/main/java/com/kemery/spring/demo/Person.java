@@ -5,6 +5,8 @@ public class Person {
 	private int id;
 	private String name;
 	
+	private int taxId;
+	
 	public Person() {
 		
 	}
@@ -21,7 +23,7 @@ public class Person {
 
 	@Override
 	public String toString() {
-		return "Person [id=" + id + ", name=" + name + "]";
+		return "Person [id=" + id + ", name=" + name + ", taxId=" + taxId + "]";
 	}
 
 
@@ -29,4 +31,13 @@ public class Person {
 		
 		System.out.println("I am a person.");
 	}
+
+
+
+	public void setTaxId(int taxId) {
+		this.taxId = taxId;
+	}
+	
+	
+	
 }
