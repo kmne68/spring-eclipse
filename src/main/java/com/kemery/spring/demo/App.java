@@ -16,6 +16,8 @@ public class App {
 	//	Person person = new Person();
 		person.speak();
 		
+		System.out.println(person);
+		
 		((ClassPathXmlApplicationContext)context).close();
 
 	}

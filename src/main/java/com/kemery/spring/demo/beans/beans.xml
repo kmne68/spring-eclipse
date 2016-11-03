@@ -5,6 +5,7 @@
 
 
 	<bean id="person" class="com.kemery.spring.demo.Person">
-	
+		<constructor-arg value="777" type="int" index="0" name="id"></constructor-arg>
+		<constructor-arg value="George" index="1" name="name" type="String"></constructor-arg>
 	</bean>
 </beans>
