@@ -16,7 +16,10 @@ public class App {
 	//	Person person = new Person();
 		person.speak();
 		
+		Address address = (Address)context.getBean("address");
+		
 		System.out.println(person);
+		System.out.println(address);
 		
 		((ClassPathXmlApplicationContext)context).close();
 
