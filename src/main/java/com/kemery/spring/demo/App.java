@@ -12,13 +12,19 @@ public class App {
 		ApplicationContext context = new ClassPathXmlApplicationContext("com/kemery/spring/demo/beans/beans.xml");
 	
 		
-		Person person = (Person)context.getBean("person");
+		Person person1 = (Person)context.getBean("person");
 	//	Person person = new Person();
-		person.speak();
+	//	person.speak();
+		
+		Person person2 = (Person)context.getBean("person");
+	//	person.speak();
 		
 		Address address = (Address)context.getBean("address");
 		
-		System.out.println(person);
+		person1.setTaxId(777);
+		
+		System.out.println(person1);
+		System.out.println(person2);
 		System.out.println(address);
 		
 		((ClassPathXmlApplicationContext)context).close();
