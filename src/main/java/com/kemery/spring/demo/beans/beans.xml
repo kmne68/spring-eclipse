@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
-	default-init-method="init" default-destroy-method="destroy">
+	default-init-method="init" default-destroy-method="destroy"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 
 	<bean id="person" class="com.kemery.spring.demo.Person"
@@ -27,6 +28,12 @@
 		<constructor-arg name="street" value="123 Test Dr" index="0" type="String"></constructor-arg>
 		<constructor-arg name="postcode" value="55555" index="1" type="String"></constructor-arg>
 	</bean>
+	
+	<bean id="address2" class="com.kemery.spring.demo.Address" p:street="71 Easy Street" p:postcode="75757">
+		<!-- constructor-arg name="street" value="745 Test Dr" index="0" type="String"></constructor-arg>
+		<constructor-arg name="postcode" value="76541" index="1" type="String"></constructor-arg-->
+	</bean>
+	
 	<bean id="personfactory"
 		class="com.kemery.spring.demo.PersonFactory">
 	</bean>
