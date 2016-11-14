@@ -37,4 +37,26 @@
 	<bean id="personfactory"
 		class="com.kemery.spring.demo.PersonFactory">
 	</bean>
+	<bean id="adventuringparty" name="list"
+		class="com.kemery.spring.demo.AdventuringParty">
+	<constructor-arg value="Unexpected Party"></constructor-arg>
+	<constructor-arg>
+		<list>
+			<value>Gandalf</value>
+			<value>Thorin</value>
+			<value>Fili</value>
+			<value>Kili</value>
+			<value>Dori</value>
+			<value>Nori</value>
+			<value>Ori</value>
+			<value>Oin</value>
+			<value>Gloin</value>
+			<value>Bifur</value>
+			<value>Bofur</value>
+			<value>Bombur</value>
+			<value>Balin</value>
+			<value>Dwalin</value>
+		</list>
+	</constructor-arg>
+	</bean>
 </beans>

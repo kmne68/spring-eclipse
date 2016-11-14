@@ -11,6 +11,9 @@ public class App {
 //		ApplicationContext context = new FileSystemXmlApplicationContext("src/main/java/com/kemery/spring/demo/beans/beans.xml");
 		ApplicationContext context = new ClassPathXmlApplicationContext("com/kemery/spring/demo/beans/beans.xml");
 	
+		AdventuringParty party = (AdventuringParty)context.getBean("adventuringparty");
+		
+		System.out.println(party);
 		
 		Person person1 = (Person)context.getBean("person");
 	//	Person person = new Person();
