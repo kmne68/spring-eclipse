@@ -33,6 +33,10 @@ public class App {
 		Address address2 = (Address) context.getBean("address2");
 		System.out.println(address2);
 		
+		Jungle jungle = (Jungle)context.getBean("jungle");
+		
+		System.out.println(jungle);
+		
 		((ClassPathXmlApplicationContext)context).close();
 
 	}
