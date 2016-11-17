@@ -5,12 +5,25 @@ import java.util.List;
 public class Jungle {
 
 	private Animal largest;
+	private Animal monkeyest;
 	private List<Animal> animals;
 	
 
 	public Animal getLargest() {
 		
 		return largest;
+	}
+	
+	
+	public Animal getMonkyest() {
+		
+		return monkeyest;
+	}
+	
+	
+	public void setMonkeyest(Animal monkeyest) {
+		
+		this.monkeyest = monkeyest;
 	}
 
 	
@@ -39,6 +52,7 @@ public class Jungle {
 		
 		sb.append("Largest: " + largest);
 		sb.append("\n");
+		sb.append("Monkeyest: " + monkeyest);
 		sb.append("Others:\n");
 		
 		for(Animal animal: animals) {

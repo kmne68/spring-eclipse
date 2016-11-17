@@ -60,12 +60,19 @@
 	</constructor-arg>
 	</bean>
 	<bean id="jungle" class="com.kemery.spring.demo.Jungle">
-		<property name="largest" ref="elephant"></property>
+	<property name="largest" ref="elephant"></property>
+	<property name="monkeyest" >
+		<bean class="com.kemery.spring.demo.Animal">
+			<property name="name" value="Maurice"></property>
+			<property name="type" value="monkey"></property>
+		</bean>
+	</property>
 		<property name="animals">
 			<list>
 				<ref bean="snake" />
 				<ref bean="elephant" />
 				<ref bean="lion" />
+				
 			</list>
 		</property>
 	</bean>
