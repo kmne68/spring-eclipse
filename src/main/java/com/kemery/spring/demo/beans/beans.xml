@@ -67,23 +67,30 @@
 			<property name="type" value="monkey"></property>
 		</bean>
 	</property>
-		<property name="animals">
+	<property name="beasts">
 			<list>
 				<ref bean="snake" />
 				<ref bean="elephant" />
 				<ref bean="lion" />
 			</list>
 		</property>
-		
-		<property name="foods">
+
+	<property name="foods">
 		<props>
 			<prop key="gorilla">banana</prop>
 			<prop key="panda">bamboo</prop>
 			<prop key="parrot">mango</prop>
 		</props>
 		</property>
+	<property name="animals">
+		<map>
+			<entry key="tiger" value-ref="tiger"></entry>
+			<entry key="snake" value-ref="snake"></entry>
+			<entry key="rhinocerous" value-ref="rhinocerous"></entry>
+		</map>
+	</property>
 	</bean>
-	
+
 	<bean id="lion" name="lion" class="com.kemery.spring.demo.Animal">
 		<property name="name" value="Igor"></property>
 		<property name="type" value="lion"></property>
@@ -97,5 +104,15 @@
 		class="com.kemery.spring.demo.Animal">
 		<property name="name" value="Bob"></property>
 		<property name="type" value="snake"></property>
+	</bean>
+	<bean id="tiger" name="tiger"
+		class="com.kemery.spring.demo.Animal">
+		<property name="name" value="Tony"></property>
+		<property name="type" value="tiger"></property>
+	</bean>
+	<bean id="rhinocerous" name="rhinocerous"
+		class="com.kemery.spring.demo.Animal">
+		<property name="name" value="Ralph"></property>
+		<property name="type" value="rhinocerous"></property>
 	</bean>
 </beans>
