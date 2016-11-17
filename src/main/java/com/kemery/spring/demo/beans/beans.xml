@@ -72,10 +72,18 @@
 				<ref bean="snake" />
 				<ref bean="elephant" />
 				<ref bean="lion" />
-				
 			</list>
 		</property>
+		
+		<property name="foods">
+		<props>
+			<prop key="gorilla">banana</prop>
+			<prop key="panda">bamboo</prop>
+			<prop key="parrot">mango</prop>
+		</props>
+		</property>
 	</bean>
+	
 	<bean id="lion" name="lion" class="com.kemery.spring.demo.Animal">
 		<property name="name" value="Igor"></property>
 		<property name="type" value="lion"></property>

@@ -1,13 +1,23 @@
 package com.kemery.spring.demo;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+
 
 public class Jungle {
 
 	private Animal largest;
 	private Animal monkeyest;
 	private List<Animal> animals;
+	private Map<String, String> foods = new HashMap<String, String>();
 	
+	
+	public void setFoods(Map<String, String> foods) {
+		
+		this.foods = foods;
+	}
+
 
 	public Animal getLargest() {
 		
@@ -60,6 +70,11 @@ public class Jungle {
 			sb.append("\n");
 		}
 		
+		for(Map.Entry<String, String> entry: foods.entrySet()) {
+			
+			sb.append(entry.getKey() + ": " + entry.getValue() + "\n");
+		}
+		
 		return sb.toString();
 	}
-}
+} 
