@@ -7,7 +7,9 @@ public class App {
 
 	public static void main(String[] args) {
 			
-		ApplicationContext context = new ClassPathXmlApplicationContext("com.kemery.spring.demo.logger");
+		ApplicationContext context = new ClassPathXmlApplicationContext("com/kemery/spring/demo/logger/new_beans.xml");
+		
+		// 		ApplicationContext context = new ClassPathXmlApplicationContext("com/kemery/spring/demo/beans/beans.xml");
 		
 		Logger logger = (Logger)context.getBean("logger");
 		

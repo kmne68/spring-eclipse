@@ -4,15 +4,17 @@ package com.kemery.spring.demo.logger;
 
 public class Logger {
 
-	private ConsoleWriter consoleWriter;
-	private FileWriter fileWriter;
+	private LogWriter consoleWriter;
+	private LogWriter fileWriter;
 	
-	public void setConsoleWriter (ConsoleWriter writer) {
+	// change parameter from ConsoleWriter 2016-11-23
+	public void setConsoleWriter (LogWriter writer) {
 		
 		this.consoleWriter = writer;
 	}
 	
-	public void setFileWriter(FileWriter fileWriter) {
+	// change parameter from FileWriter 2016-11-23	
+	public void setFileWriter(LogWriter fileWriter) {
 		
 		this.fileWriter = fileWriter;
 	}

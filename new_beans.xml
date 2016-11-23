@@ -5,15 +5,15 @@
 
 
 	<bean id="logger" class="com.kemery.spring.demo.logger.Logger"
-		autowire="byType">
+		autowire="byName">
 	
 	</bean>
 
 
-	<bean id="consolewriter"
+	<bean id="consoleWriter"
 		class="com.kemery.spring.demo.logger.ConsoleWriter">
 	</bean>
-	<bean id="filewriter"
+	<bean id="fileWriter"
 		class="com.kemery.spring.demo.logger.FileWriter">
 	</bean>
 </beans>
