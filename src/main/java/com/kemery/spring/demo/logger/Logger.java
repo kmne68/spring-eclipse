@@ -7,6 +7,15 @@ public class Logger {
 	private LogWriter consoleWriter;
 	private LogWriter fileWriter;
 	
+	
+	// Remove this constructor and change autowire from "constructor" to "By Name" in the beans overview
+	// to implement autowire by name
+	public Logger(ConsoleWriter consoleWriter, FileWriter fileWriter) {
+		
+		this.consoleWriter = consoleWriter;
+		this.fileWriter = fileWriter;
+	}
+	
 	// change parameter from ConsoleWriter 2016-11-23
 	public void setConsoleWriter (LogWriter writer) {
 		
