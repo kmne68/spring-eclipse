@@ -2,24 +2,30 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
-	default-autowire="byType"
-	default-autowire-candidates="consoleWriter, fileWriter">
+	default-autowire="byType">
+	<!-- default-autowire-candidates="consoleWriter, fileWriter"-->
 
 
-	<bean id="logger" class="com.kemery.spring.demo.logger.Logger"
-		autowire="byName">
+	<bean id="logger" class="com.kemery.spring.demo.logger.Logger">
 	
 	</bean>
 
 
 	<bean id="consoleWriter"
-		class="com.kemery.spring.demo.logger.ConsoleWriter">
+		class="com.kemery.spring.demo.logger.ConsoleWriter" primary="true">
 	</bean>
+
+	<bean id="consoleWriterDemo"
+		class="com.kemery.spring.demo.logger.ConsoleWriter">
+		
+	</bean>
+	
 	<bean id="fileWriter"
 		class="com.kemery.spring.demo.logger.FileWriter">
 	</bean>
 	
 	<bean id ="fileWriterDemo"
-		class="com.kemery.spring.demo.logger.FileWriter">
+		class="com.kemery.spring.demo.logger.FileWriter"
+		autowire-candidate="false">
 	</bean>
 </beans>
