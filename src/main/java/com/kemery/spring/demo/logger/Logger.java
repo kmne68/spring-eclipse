@@ -3,6 +3,8 @@ package com.kemery.spring.demo.logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import javax.annotation.Resource;
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
 
 public class Logger {
 
@@ -43,4 +45,18 @@ public class Logger {
 			consoleWriter.write(text);
 		}
 	}
+	
+	
+	@PostConstruct
+	public void init() {
+		System.out.println("init");
+	}
+	
+	
+	@PreDestroy
+	public void destroy() {
+		System.out.println("destroy");
+	}
+	
+	
 }
