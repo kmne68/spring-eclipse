@@ -2,6 +2,7 @@ package com.kemery.spring.demo.logger;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import javax.annotation.Resource;
 
 public class Logger {
 
@@ -18,15 +19,13 @@ public class Logger {
 	}
 	*/
 	
-	@Autowired
-	@Qualifier("toconsole")
+	@Resource(name="consoleWriterDemo")
 	public void setConsoleWriter (ConsoleWriter writer) {
 		
 		this.consoleWriter = writer;
 	}
 	
-	@Autowired
-	@Qualifier("filewriter")
+	@Resource
 	public void setFileWriter(LogWriter fileWriter) {
 		
 		this.fileWriter = fileWriter;
