@@ -11,6 +11,11 @@
 
 	<bean id="consoleWriter"
 		class="com.kemery.spring.demo.logger.ConsoleWriter">
+	<qualifier value="toconsole"></qualifier>
+	</bean>
+
+	<bean id="consoleWriterDemo"
+		class="com.kemery.spring.demo.logger.ConsoleWriter">
 	</bean>
 
 	

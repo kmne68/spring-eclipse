@@ -1,12 +1,13 @@
 package com.kemery.spring.demo.logger;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 
 public class Logger {
 
-	//@Autowired
+	
 	private ConsoleWriter consoleWriter;
-	private FileWriter fileWriter;
+	private LogWriter fileWriter;
 	
 	
 	/*
@@ -17,14 +18,16 @@ public class Logger {
 	}
 	*/
 	
-	
+	@Autowired
+	@Qualifier("toconsole")
 	public void setConsoleWriter (ConsoleWriter writer) {
 		
 		this.consoleWriter = writer;
 	}
 	
-	@Autowired (required = false)
-	public void setFileWriter(FileWriter fileWriter) {
+	@Autowired
+	@Qualifier("filewriter")
+	public void setFileWriter(LogWriter fileWriter) {
 		
 		this.fileWriter = fileWriter;
 	}
