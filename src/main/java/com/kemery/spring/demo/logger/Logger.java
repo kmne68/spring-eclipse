@@ -1,29 +1,29 @@
 package com.kemery.spring.demo.logger;
 
-
+import org.springframework.beans.factory.annotation.Autowired;
 
 public class Logger {
 
+	//@Autowired
 	private ConsoleWriter consoleWriter;
 	private FileWriter fileWriter;
 	
 	
-	// Remove this constructor and change autowire from "constructor" to "By Name" in the beans overview
-	// to implement autowire by name
-/*	public Logger(ConsoleWriter consoleWriter, FileWriter fileWriter) {
+	@Autowired
+	public Logger(ConsoleWriter consoleWriter, FileWriter fileWriter) {
 		
 		this.consoleWriter = consoleWriter;
 		this.fileWriter = fileWriter;
 	}
-*/
 	
-	// change parameter from ConsoleWriter 2016-11-23
+	
+	//@Autowired
 	public void setConsoleWriter (ConsoleWriter writer) {
 		
 		this.consoleWriter = writer;
 	}
 	
-	// change parameter from FileWriter 2016-11-23	
+	//@Autowired	
 	public void setFileWriter(FileWriter fileWriter) {
 		
 		this.fileWriter = fileWriter;
