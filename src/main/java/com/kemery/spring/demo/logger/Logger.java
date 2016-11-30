@@ -1,10 +1,10 @@
 package com.kemery.spring.demo.logger;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
-import javax.annotation.Resource;
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
+import javax.annotation.Resource;
+import javax.inject.Inject;
+import javax.inject.Named;
 
 public class Logger {
 
@@ -13,21 +13,15 @@ public class Logger {
 	private LogWriter fileWriter;
 	
 	
-	/*
-	public Logger(ConsoleWriter consoleWriter, FileWriter fileWriter) {
-		
-		this.consoleWriter = consoleWriter;
-		this.fileWriter = fileWriter;
-	}
-	*/
-	
-	@Resource(name="consoleWriterDemo")
+	@Inject
+	@Named(value="consoleWriterDemo")
 	public void setConsoleWriter (ConsoleWriter writer) {
 		
 		this.consoleWriter = writer;
 	}
 	
-	@Resource
+	@Inject
+	@Named(value="fileWriter")
 	public void setFileWriter(LogWriter fileWriter) {
 		
 		this.fileWriter = fileWriter;
