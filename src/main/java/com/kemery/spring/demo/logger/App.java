@@ -3,6 +3,8 @@ package com.kemery.spring.demo.logger;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import com.kemery.spring.demo.Robot;
+
 public class App {
 
 	public static void main(String[] args) {
@@ -13,8 +15,12 @@ public class App {
 		
 		Logger logger = (Logger)context.getBean("logger");
 		
+		Robot robot = (Robot)context.getBean("robot");
+		
 		logger.writeConsole("Hello there");
 		logger.writeFile("Hi again");
+		
+		robot.speak();
 		
 		((ClassPathXmlApplicationContext)context).close();
 	}
