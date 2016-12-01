@@ -6,6 +6,9 @@ import javax.annotation.Resource;
 import javax.inject.Inject;
 import javax.inject.Named;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Logger {
 
 	
@@ -14,7 +17,6 @@ public class Logger {
 	
 	
 	@Inject
-	@Named(value="consoleWriterDemo")
 	public void setConsoleWriter (ConsoleWriter writer) {
 		
 		this.consoleWriter = writer;

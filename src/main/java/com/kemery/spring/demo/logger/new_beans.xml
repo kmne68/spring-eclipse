@@ -6,22 +6,11 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
 
 
-	<bean id="logger" class="com.kemery.spring.demo.logger.Logger"></bean>
 
 
-	<bean id="consoleWriter"
-		class="com.kemery.spring.demo.logger.ConsoleWriter">
-	<qualifier value="toconsole"></qualifier>
-	</bean>
-
-	<bean id="consoleWriterDemo"
-		class="com.kemery.spring.demo.logger.ConsoleWriter">
-	</bean>
-
-	
-	<bean id="fileWriter"
-		class="com.kemery.spring.demo.logger.FileWriter">
-	</bean>
 	
 	<context:annotation-config></context:annotation-config>
+	<context:component-scan
+		base-package="com.kemery.spring.demo.logger">
+	</context:component-scan>
 </beans>
