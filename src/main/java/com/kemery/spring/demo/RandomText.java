@@ -2,6 +2,10 @@ package com.kemery.spring.demo;
 
 import java.util.Random;
 
+import org.springframework.stereotype.Component;
+
+
+@Component
 public class RandomText {
 	
 	private static String[] texts = {
