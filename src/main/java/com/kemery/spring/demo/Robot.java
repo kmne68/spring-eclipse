@@ -24,9 +24,9 @@ public class Robot {
 		this.id = id;
 	}
 	
-	
+	// new java.util.Date().toString()
 	@Autowired
-	public void setSpeech(@Value("Hi there.")String speech) {
+	public void setSpeech(@Value("#{T(Math).sin(T(Math).PI/4) ^ 2}")String speech) {
 		
 		this.speech = speech;
 	}
