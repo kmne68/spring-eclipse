@@ -11,17 +11,24 @@
 		base-package="com.kemery.spring.demo.logger">
 	</context:component-scan>
 	
-	<bean id="robot" name="robot" class="com.kemery.spring.demo.Robot">
+	<!--bean id="robot" name="robot" class="com.kemery.spring.demo.Robot">
 		<property name="id" value="#{77 + 55}"></property>
 		<property name="speech" value="#{'Name that bot: ' + randomtext.getText()}"></property>
+	</bean-->
+
+	<context:property-placeholder
+		location="com/kemery/spring/demo/props/jdbc.properties" />
+	<bean class="com.kemery.spring.demo.Robot" id="robot">
+		<property name="id" value="${jdbc.user}"></property>
+		<!--property name="speech" value="${jdbc.password}"></property-->
 	</bean>
 
 
 
-	<bean id="randomtext" name="randomtext"
+	<!--bean id="randomtext" name="randomtext"
 		class="com.kemery.spring.demo.RandomText">
 	</bean>
 	<context:component-scan
 		base-package="com.kemery.spring.demo.beans.beans.xml">
-	</context:component-scan>
+	</context:component-scan-->
 </beans>
